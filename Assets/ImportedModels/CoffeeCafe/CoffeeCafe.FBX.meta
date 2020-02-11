@@ -7,11 +7,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BarFloor
-    second: {fileID: 2100000, guid: 1c414f599bc57744084019b8b73094e7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Brick
     second: {fileID: 2100000, guid: 07a92ca12ac5f244eada4bb0d4f922b1, type: 2}
   - first:
@@ -29,11 +24,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: TiledFloor
     second: {fileID: 2100000, guid: d6452d6591188404a96a87c4c7101a64, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WhitePlastic
-    second: {fileID: 2100000, guid: a4c7f53132a5a404196a852c48d5c1b8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -61,7 +51,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -74,7 +64,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -92,8 +82,8 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
-    normalCalculationMode: 4
+    tangentImportMode: 0
+    normalCalculationMode: 1
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
