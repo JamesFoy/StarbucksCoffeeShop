@@ -82,6 +82,8 @@ namespace VRTK
         [Tooltip("The Interactable Object to snap into the dropzone when the drop zone is enabled. The Interactable Object must be valid in any given policy list to snap.")]
         public VRTK_InteractableObject defaultSnappedInteractableObject;
 
+        public bool snappedObjectIsPrefab;
+
         [Header("Obsolete Settings")]
 
         [System.Obsolete("`VRTK_SnapDropZone.defaultSnappedObject` has been replaced with the `VRTK_SnapDropZone.defaultSnappedInteractableObject`. This parameter will be removed in a future version of VRTK.")]
@@ -837,15 +839,22 @@ namespace VRTK
             Vector3 startScale = ioTransform.localScale;
             bool storedKinematicState = ioCheck.isKinematic;
             ioCheck.isKinematic = true;
-            while (elapsedTime <= duration)
+            if (duration > 0)
             {
-                elapsedTime += Time.deltaTime;
-                if (ioTransform != null && endSettings != null)
+                while (elapsedTime <= duration)
                 {
-                    ioTransform.position = Vector3.Lerp(startPosition, endSettings.transform.position, (elapsedTime / duration));
-                    ioTransform.rotation = Quaternion.Lerp(startRotation, endSettings.transform.rotation, (elapsedTime / duration));
-                    ioTransform.localScale = Vector3.Lerp(startScale, endScale, (elapsedTime / duration));
+                    elapsedTime += Time.deltaTime;
+                    if (ioTransform != null && endSettings != null)
+                    {
+                        ioTransform.position = Vector3.Lerp(startPosition, endSettings.transform.position, (elapsedTime / duration));
+                        ioTransform.rotation = Quaternion.Lerp(startRotation, endSettings.transform.rotation, (elapsedTime / duration));
+                        ioTransform.localScale = Vector3.Lerp(startScale, endScale, (elapsedTime / duration));
+                    }
+                    yield return null;
                 }
+            }
+            else
+            {
                 yield return null;
             }
 
@@ -1070,8 +1079,13 @@ namespace VRTK
                 ChooseDestroyType(joints[i]);
             }
 
-            //Go through all of the components on the highlighted object and delete any components that aren't in the valid component list
+      //Go through all of the components on the highlighted object and delete any components that aren't in the valid component list
             Component[] components = objectToClean.GetComponentsInChildren<Component>(true);
+          HashSet<Component> deletedComponents = new HashSet<Component>();
+          bool changed = true;
+          while (components.Length > 0 && changed)
+          {
+            changed = false;
             for (int i = 0; i < components.Length; i++)
             {
                 Component component = components[i];
@@ -1091,15 +1105,26 @@ namespace VRTK
                 //if this is a valid component then just continue to the next component
                 if (valid)
                 {
+                    changed &= deletedComponents.Add(component);
                     continue;
                 }
 
                 //If not a valid component then delete it
+              try
+              {
                 ChooseDestroyType(component);
+                changed &= deletedComponents.Add(component);
+              }
+              catch (UnityException)
+              {
+                // ignored.
+              }
             }
+            components = objectToClean.GetComponentsInChildren<Component>(true);
+          }
         }
 
-        protected virtual void InitialiseHighlighter()
+    protected virtual void InitialiseHighlighter()
         {
             VRTK_BaseHighlighter existingHighlighter = VRTK_BaseHighlighter.GetActiveHighlighter(gameObject);
             //If no highlighter is found on the GameObject then create the default one

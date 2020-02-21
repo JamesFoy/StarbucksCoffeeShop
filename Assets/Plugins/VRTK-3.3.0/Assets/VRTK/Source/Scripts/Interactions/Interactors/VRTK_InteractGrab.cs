@@ -534,6 +534,11 @@ namespace VRTK
             return (objectToGrabScript != null && objectToGrabScript.grabAttachMechanicScript != null && objectToGrabScript.grabAttachMechanicScript.ValidGrab(controllerAttachPoint));
         }
 
+        /// <summary>
+        ///  ObjectToGrab must be the same object as returned from interactTouch.GetTouchedObject or this method will fail silently.
+        /// </summary>
+        /// <param name="objectToGrab"></param>
+        /// <returns></returns>
         protected virtual bool IsValidGrabAttempt(GameObject objectToGrab)
         {
             bool initialGrabAttempt = false;

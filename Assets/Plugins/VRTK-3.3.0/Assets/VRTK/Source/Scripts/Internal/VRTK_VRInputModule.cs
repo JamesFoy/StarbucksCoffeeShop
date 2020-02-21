@@ -8,6 +8,7 @@
     public class VRTK_VRInputModule : PointerInputModule
     {
         public List<VRTK_UIPointer> pointers = new List<VRTK_UIPointer>();
+        List<RaycastResult> results = new List<RaycastResult>();
 
         public virtual void Initialise()
         {
@@ -27,10 +28,10 @@
                 VRTK_UIPointer pointer = pointers[i];
                 if (pointer.gameObject.activeInHierarchy && pointer.enabled)
                 {
-                    List<RaycastResult> results = new List<RaycastResult>();
+                    results.Clear();
                     if (pointer.PointerActive())
                     {
-                        results = CheckRaycasts(pointer);
+                        results = CheckRaycasts(pointer, results);
                     }
 
                     //Process events
@@ -42,7 +43,8 @@
             }
         }
 
-        protected virtual List<RaycastResult> CheckRaycasts(VRTK_UIPointer pointer)
+        protected virtual List<RaycastResult> CheckRaycasts(VRTK_UIPointer pointer,
+                                                            List<RaycastResult> results)
         {
             RaycastResult raycastResult = new RaycastResult();
             raycastResult.worldPosition = pointer.GetOriginPosition();
@@ -50,9 +52,16 @@
 
             pointer.pointerEventData.pointerCurrentRaycast = raycastResult;
 
-            List<RaycastResult> raycasts = new List<RaycastResult>();
-            eventSystem.RaycastAll(pointer.pointerEventData, raycasts);
-            return raycasts;
+            eventSystem.RaycastAll(pointer.pointerEventData, results);
+            for (int i = results.Count - 1; i >= 0; i--)
+            {
+                var result = results[i];
+                if (!(result.module is VRTK_UIGraphicRaycaster))
+                {
+                    results.RemoveAt(i);
+                }
+            }
+            return results;
         }
 
         protected virtual bool CheckTransformTree(Transform target, Transform source)
@@ -72,7 +81,18 @@
 
         protected virtual bool NoValidCollision(VRTK_UIPointer pointer, List<RaycastResult> results)
         {
-            return (results.Count == 0 || !CheckTransformTree(results[0].gameObject.transform, pointer.pointerEventData.pointerEnter.transform));
+            if (results.Count == 0)
+            {
+                return true;
+            }
+
+            var retval = !CheckTransformTree(results[0].gameObject.transform, pointer.pointerEventData.pointerEnter.transform);
+            if (retval)
+            {
+//                Debug.Log($"{results.Count}: " + results[0].gameObject);
+            }
+
+            return retval;
         }
 
         protected virtual bool IsHovering(VRTK_UIPointer pointer)

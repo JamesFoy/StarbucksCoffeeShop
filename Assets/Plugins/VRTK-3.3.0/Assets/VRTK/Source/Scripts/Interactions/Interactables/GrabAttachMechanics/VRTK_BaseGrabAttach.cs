@@ -126,6 +126,7 @@ namespace VRTK.GrabAttachMechanics
         {
             grabbedObject = null;
             grabbedObjectScript = null;
+            grabbedObjectRigidBody = null;
             trackPoint = null;
             grabbedSnapHandle = null;
             initialAttachPoint = null;

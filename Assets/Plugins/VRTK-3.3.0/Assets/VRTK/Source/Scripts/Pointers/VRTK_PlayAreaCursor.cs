@@ -1,4 +1,7 @@
 ﻿// Play Area Cursor|Pointers|10050
+
+using System;
+
 namespace VRTK
 {
     using UnityEngine;
@@ -359,6 +362,11 @@ namespace VRTK
         protected virtual void SetCursorColor(GameObject cursorObject, Color color)
         {
             Renderer playareaRenderer = cursorObject.GetComponentInChildren<Renderer>();
+
+            if (playareaRenderer != null)
+            {
+                playareaRenderer.enabled = (Mathf.Abs(color.a) > 0.001);
+            }
 
             if (playareaRenderer != null && playareaRenderer.material && playareaRenderer.material.HasProperty("_Color"))
             {

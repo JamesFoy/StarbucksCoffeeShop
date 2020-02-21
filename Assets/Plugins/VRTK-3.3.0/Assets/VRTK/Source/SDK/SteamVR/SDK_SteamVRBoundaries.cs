@@ -1,14 +1,16 @@
 ﻿// SteamVR Boundaries|SDK_SteamVR|005
+
 namespace VRTK
 {
 #if VRTK_DEFINE_SDK_STEAMVR
     using UnityEngine;
+    using Valve.VR;
 #endif
 
-    /// <summary>
-    /// The SteamVR Boundaries SDK script provides a bridge to the SteamVR SDK play area.
-    /// </summary>
-    [SDK_Description(typeof(SDK_SteamVRSystem))]
+  /// <summary>
+  /// The SteamVR Boundaries SDK script provides a bridge to the SteamVR SDK play area.
+  /// </summary>
+  [SDK_Description(typeof(SDK_SteamVRSystem))]
     public class SDK_SteamVRBoundaries
 #if VRTK_DEFINE_SDK_STEAMVR
         : SDK_BaseBoundaries

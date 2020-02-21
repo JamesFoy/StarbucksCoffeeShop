@@ -136,13 +136,24 @@ namespace VRTK
             {
                 NavMeshHit hit;
                 validNavMeshLocation = NavMesh.SamplePosition(destinationPosition, out hit, navMeshData.distanceLimit, navMeshData.validAreas);
+                if (validNavMeshLocation == false)
+                {
+                    return false;
+                }
             }
             else
             {
                 validNavMeshLocation = true;
             }
 
-            return (validNavMeshLocation && !(VRTK_PolicyList.Check(target.gameObject, targetListPolicy)));
+            var policy = (VRTK_PolicyList.Check(target.gameObject, targetListPolicy));
+            var retval = (validNavMeshLocation && !(VRTK_PolicyList.Check(target.gameObject, targetListPolicy)));
+
+            // Debug.Log("Policy check: " + target.gameObject + " using policy " + targetListPolicy.gameObject + 
+            //          " = policy:" + policy + 
+            //          "; navMesh: " + validNavMeshLocation +
+            //          "; policy-check: " + VRTK_PolicyList.Check(target.gameObject, targetListPolicy));
+            return retval;
         }
 
         /// <summary>

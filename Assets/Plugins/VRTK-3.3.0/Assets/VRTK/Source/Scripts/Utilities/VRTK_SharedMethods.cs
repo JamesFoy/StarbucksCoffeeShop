@@ -448,8 +448,13 @@ namespace VRTK
         /// <returns>The direction Vector3 based on the given axis index.</returns>
         public static Vector3 AxisDirection(int axisIndex, Transform givenTransform = null)
         {
-            Vector3[] worldDirections = (givenTransform != null ? new Vector3[] { givenTransform.right, givenTransform.up, givenTransform.forward } : new Vector3[] { Vector3.right, Vector3.up, Vector3.forward });
-            return worldDirections[(int)Mathf.Clamp(axisIndex, 0f, worldDirections.Length)];
+          switch (axisIndex)
+          {
+              case 0: return givenTransform != null ? givenTransform.right : Vector3.right;
+              case 1: return givenTransform != null ? givenTransform.up: Vector3.up;
+              case 2: return givenTransform != null ? givenTransform.forward: Vector3.forward;
+              default: throw new ArgumentException();
+          }
         }
 
         /// <summary>

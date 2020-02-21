@@ -3,6 +3,7 @@
 // Purpose: Prompt developers to use settings most compatible with SteamVR.
 //
 //=============================================================================
+#pragma warning disable 618
 
 using UnityEngine;
 using UnityEditor;

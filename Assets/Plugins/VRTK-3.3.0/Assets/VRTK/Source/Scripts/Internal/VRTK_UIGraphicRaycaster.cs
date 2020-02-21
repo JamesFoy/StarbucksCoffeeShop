@@ -140,6 +140,8 @@
                         sortingLayer = canvas.sortingLayerID,
                         sortingOrder = canvas.sortingOrder,
                     };
+
+                    // Debug.Log("VRTK-UIGraphics Raycast success: " + Path(graphic.gameObject));
                     VRTK_SharedMethods.AddListValue(results, result);
                 }
             }
@@ -158,6 +160,19 @@
 
                 currentCanvas = gameObject.GetComponent<Canvas>();
                 return currentCanvas;
+            }
+        }
+
+        static string Path(GameObject go)
+        {
+
+            if (go.transform.parent != null)
+            {
+                return Path(go.transform.parent.gameObject) + "/" + go.name;
+            }
+            else
+            {
+                return go.name;
             }
         }
     }

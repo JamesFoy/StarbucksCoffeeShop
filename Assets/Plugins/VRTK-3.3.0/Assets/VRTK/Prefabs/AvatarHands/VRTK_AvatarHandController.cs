@@ -217,6 +217,7 @@ namespace VRTK
         protected SDK_BaseController.ButtonTypes savedPinkyAxisButtonState;
         protected SDK_BaseController.ButtonTypes savedThreeFingerAxisButtonState;
 
+        protected SDK_BaseController.ControllerType effectiveControllerType;
         protected VRTK_ControllerReference controllerReference;
 
         #endregion Protected class variables
@@ -224,6 +225,7 @@ namespace VRTK
         #region MonoBehaviour methods
         protected virtual void OnEnable()
         {
+            Debug.Log("On Enable");
             animator = GetComponent<Animator>();
             controllerEvents = (controllerEvents != null ? controllerEvents : GetComponentInParent<VRTK_ControllerEvents>());
             interactNearTouch = (interactNearTouch != null ? interactNearTouch : GetComponentInParent<VRTK_InteractNearTouch>());
@@ -237,7 +239,7 @@ namespace VRTK
         protected virtual void OnDisable()
         {
             UnsubscribeEvents();
-            controllerType = SDK_BaseController.ControllerType.Undefined;
+            effectiveControllerType = SDK_BaseController.ControllerType.Undefined;
             for (int i = 0; i < fingerAnimationRoutine.Length; i++)
             {
                 if (fingerAnimationRoutine[i] != null)
@@ -249,9 +251,14 @@ namespace VRTK
 
         protected virtual void Update()
         {
-            if (controllerType == SDK_BaseController.ControllerType.Undefined)
+            if (effectiveControllerType == SDK_BaseController.ControllerType.Undefined)
             {
-                DetectController();
+                if (controllerType == SDK_BaseController.ControllerType.Undefined)
+                {
+                    DetectController();
+                }
+                InitializeController();
+                effectiveControllerType = controllerType;
             }
 
             if (animator != null)
@@ -298,6 +305,7 @@ namespace VRTK
         #region Subscription Managers
         protected virtual void SubscribeEvents()
         {
+            Debug.Log("Subscribe Events: " + controllerEvents);
             if (controllerEvents != null)
             {
                 SubscribeButtonEvent(thumbButton, ref savedThumbButtonState, DoThumbEvent);
@@ -342,6 +350,7 @@ namespace VRTK
 
         protected virtual void UnsubscribeEvents()
         {
+            Debug.Log("UnSubscribe Events: " + controllerEvents);
             if (controllerEvents != null)
             {
                 UnsubscribeButtonEvent(savedThumbButtonState, DoThumbEvent);
@@ -651,6 +660,10 @@ namespace VRTK
         protected virtual void DetectController()
         {
             controllerType = VRTK_DeviceFinder.GetCurrentControllerType(controllerReference);
+        }
+
+        protected virtual void InitializeController()
+        {
             if (controllerType != SDK_BaseController.ControllerType.Undefined)
             {
                 if (setFingersForControllerType)
@@ -695,6 +708,7 @@ namespace VRTK
                             break;
                     }
                 }
+
                 UnsubscribeEvents();
                 SubscribeEvents();
                 if (mirrorModel)
@@ -787,6 +801,11 @@ namespace VRTK
             {
                 SetOverrideValue(arrayIndex, ref overrideAxisValues, OverrideState.NoOverride);
             }
+        }
+
+        void OnDestroy()
+        {
+            Debug.Log("On Destroy for " + gameObject);
         }
     }
 }

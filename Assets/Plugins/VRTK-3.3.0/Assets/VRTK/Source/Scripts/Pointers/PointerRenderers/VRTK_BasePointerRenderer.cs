@@ -76,6 +76,9 @@ namespace VRTK
         [Tooltip("Determines when the cursor/tip of the pointer renderer will be visible.")]
         public VisibilityStates cursorVisibility = VisibilityStates.OnWhenActive;
 
+        [Tooltip("Set to true to ignore the built in nav mesh checks so this pointer is free to interact with everything")]
+        public bool ignoreNavMeshCheck;
+
         protected const float BEAM_ADJUST_OFFSET = 0.0001f;
 
         protected VRTK_Pointer controllingPointer;
@@ -415,7 +418,7 @@ namespace VRTK
         protected virtual bool ValidDestination()
         {
             bool validNavMeshLocation = false;
-            if (navMeshData != null)
+            if (!ignoreNavMeshCheck && navMeshData != null)
             {
                 if (destinationHit.transform != null)
                 {
@@ -427,6 +430,7 @@ namespace VRTK
             {
                 validNavMeshLocation = true;
             }
+
             return (validNavMeshLocation && destinationHit.collider != null && !(VRTK_PolicyList.Check(destinationHit.collider.gameObject, invalidListPolicy)));
         }
 
@@ -438,7 +442,7 @@ namespace VRTK
 
                 givenObject.SetActive(currentVisible);
 
-                if (givenVisibility == VisibilityStates.AlwaysOff)
+                if (currentColor.a < 0.0001 || givenVisibility == VisibilityStates.AlwaysOff)
                 {
                     currentVisible = false;
                     ToggleRendererVisibility(givenObject, false);
@@ -498,16 +502,15 @@ namespace VRTK
         protected virtual void ChangeColor(Color givenColor)
         {
             previousColor = currentColor;
-            if ((playareaCursor != null && playareaCursor.IsActive() && playareaCursor.HasCollided()) || !ValidDestination() || (controllingPointer != null && !controllingPointer.CanSelect()))
+            if ((playareaCursor != null && playareaCursor.IsActive() && playareaCursor.HasCollided()) || 
+                !ValidDestination() || 
+                (controllingPointer != null && !controllingPointer.CanSelect()))
             {
                 givenColor = invalidCollisionColor;
             }
 
-            if (givenColor != Color.clear)
-            {
-                currentColor = givenColor;
-                ChangeMaterial(givenColor);
-            }
+            currentColor = givenColor;
+            ChangeMaterial(givenColor);
 
             if (previousColor != currentColor)
             {
@@ -594,11 +597,7 @@ namespace VRTK
                 Rigidbody objectInteratorRigidBody = objectInteractorAttachPoint.AddComponent<Rigidbody>();
                 objectInteratorRigidBody.isKinematic = true;
                 objectInteratorRigidBody.freezeRotation = true;
-#if UNITY_2018_3_OR_NEWER
-                objectInteratorRigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
-#else
                 objectInteratorRigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-#endif
                 VRTK_PlayerObject.SetPlayerObject(objectInteractorAttachPoint, VRTK_PlayerObject.ObjectTypes.Pointer);
             }
 

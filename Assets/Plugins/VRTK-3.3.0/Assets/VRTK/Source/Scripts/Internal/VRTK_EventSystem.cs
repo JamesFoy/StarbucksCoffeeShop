@@ -47,7 +47,7 @@
 
             if (current == this)
             {
-                vrInputModule.Process();
+               vrInputModule.Process();
             }
         }
 

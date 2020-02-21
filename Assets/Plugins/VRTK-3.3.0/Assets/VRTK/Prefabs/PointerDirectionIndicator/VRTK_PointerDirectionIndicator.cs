@@ -131,6 +131,7 @@ namespace VRTK
                 Renderer[] renderers = GetComponentsInChildren<Renderer>();
                 for (int i = 0; i < renderers.Length; i++)
                 {
+                    renderers[i].enabled = (Mathf.Abs(color.a) > 0.001);
                     renderers[i].material.color = color;
                 }
             }

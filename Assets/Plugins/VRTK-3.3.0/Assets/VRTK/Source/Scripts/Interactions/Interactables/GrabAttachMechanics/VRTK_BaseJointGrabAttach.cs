@@ -72,6 +72,7 @@ namespace VRTK.GrabAttachMechanics
                 Rigidbody jointRigidbody = controllerAttachJoint.GetComponent<Rigidbody>();
                 DestroyJoint(destroyImmediatelyOnThrow, applyGrabbingObjectVelocity);
                 controllerAttachJoint = null;
+                givenJoint = null;
 
                 return jointRigidbody;
             }

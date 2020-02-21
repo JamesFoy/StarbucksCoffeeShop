@@ -145,9 +145,11 @@
 #if VRTK_NO_LOGGING
             return;
 #endif
+          try
+          {
             CreateIfNotExists();
 
-            if (instance.minLevel > level)
+          if (instance.minLevel > level)
             {
                 return;
             }
@@ -164,11 +166,6 @@
                     break;
                 case LogLevels.Error:
                 case LogLevels.Fatal:
-                    if (forcePause)
-                    {
-                        UnityEngine.Debug.Break();
-                    }
-
                     if (instance.throwExceptions)
                     {
                         throw new Exception(message);
@@ -177,11 +174,22 @@
                     {
                         UnityEngine.Debug.LogError(message);
                     }
+                    if (forcePause)
+                    {
+						UnityEngine.Debug.LogError("Force break");
+                        UnityEngine.Debug.Break();
+                    }
+
                     break;
             }
-        }
+          }
+          catch (UnityException)
+          {
+            UnityEngine.Debug.LogError(message);
+          }
+    }
 
-        protected virtual void Awake()
+    protected virtual void Awake()
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
