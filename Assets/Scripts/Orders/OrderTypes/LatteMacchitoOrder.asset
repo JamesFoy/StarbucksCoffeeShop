@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: LatteMacchitoOrder
+  m_EditorClassIdentifier: Assembly-CSharp::Order
+  orderName: LatteMacchiato
+  orderDescription: 
+  orderCorrect: 
+  orderIncorrect: 
+  stepsEvent:
+  - {fileID: 11400000, guid: 150aa36f424061542bb9bf949a8404d6, type: 2}
+  - {fileID: 11400000, guid: e6a3b96546a297241837de7873badc22, type: 2}
+  - {fileID: 11400000, guid: 2d4c01dce3b043a41b3f12ef446f463b, type: 2}
+  - {fileID: 11400000, guid: 1b06416e82cf1af4984c30678cc33c3e, type: 2}

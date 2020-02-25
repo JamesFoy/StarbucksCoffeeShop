@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: FlatWhiteOrder
+  m_EditorClassIdentifier: Assembly-CSharp::Order
+  orderName: FlatWhite
+  orderDescription: 
+  orderCorrect: 
+  orderIncorrect: 
+  stepsEvent:
+  - {fileID: 11400000, guid: 9438382d4d9ddc34ca5e395cceb72dfb, type: 2}
+  - {fileID: 11400000, guid: 4f015a6c66d3a344e91579e126d1961c, type: 2}
+  - {fileID: 11400000, guid: 74806dbf1caa42f419a6949dad1b59dd, type: 2}
+  - {fileID: 11400000, guid: b58ac01f339cb4445899db2c89ed3c5d, type: 2}

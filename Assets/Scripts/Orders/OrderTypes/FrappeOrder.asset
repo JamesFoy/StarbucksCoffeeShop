@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: FrappeOrder
+  m_EditorClassIdentifier: Assembly-CSharp::Order
+  orderName: Frappe
+  orderDescription: Hi, could i please get 1 frappe, Thanks
+  orderCorrect: Thanks so much, this is exactly what i wanted
+  orderIncorrect: I dont think that this is what i ordered.
+  stepsEvent:
+  - {fileID: 11400000, guid: 0facb2912fc7bf745ad3df7c2a90c2ea, type: 2}
+  - {fileID: 11400000, guid: 8e1af0f8def09dc4d8540cfd58929940, type: 2}
+  - {fileID: 11400000, guid: 067f44ca10466634d844ae2d2244a27b, type: 2}
+  - {fileID: 11400000, guid: 907f51d3ddaad434694116670488e27a, type: 2}

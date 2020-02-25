@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: IrishCoffeeOrder
+  m_EditorClassIdentifier: Assembly-CSharp::Order
+  orderName: IrishCoffee
+  orderDescription: 
+  orderCorrect: 
+  orderIncorrect: 
+  stepsEvent:
+  - {fileID: 11400000, guid: f1865c16d4969564287e49b8f0ef8109, type: 2}
+  - {fileID: 11400000, guid: 61732924e71b59543b1669244b3f7de0, type: 2}
+  - {fileID: 11400000, guid: 271b49abf6480304da25a8f5f9ec91ed, type: 2}
+  - {fileID: 11400000, guid: a3688c008694c6440a6e0f92c7c31745, type: 2}
