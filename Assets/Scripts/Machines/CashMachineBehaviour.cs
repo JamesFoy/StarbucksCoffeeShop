@@ -16,8 +16,6 @@ public class CashMachineBehaviour : MonoBehaviour
 
     public string orderName;
 
-    private AudioSource eventSound;
-
     #region OrderVaribles
     [BoxGroup("Possible Orders")]
     public List<Order> PossibleOrders;
@@ -75,8 +73,6 @@ public class CashMachineBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        eventSound = GetComponent<AudioSource>();
-
         currentOrder = PossibleOrders[UnityEngine.Random.Range(0, PossibleOrders.Count)];
         orderAmount = amounts[UnityEngine.Random.Range(0, amounts.Count)];
 
@@ -194,56 +190,144 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonFlatWhiteOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         FlatWhiteButtonActivated.Invoke();
+        if (orderName == "FlatWhite")
+        {
+            event1.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void ButtonCaffeeAmericanoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         CaffeAmericanoButtonActivated.Invoke();
+        if (orderName == "CaffeAmericano")
+        {
+            event1.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void ButtonFrappeOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         FrappeButtonActivated.Invoke();
+        if (orderName == "Frappe")
+        {
+            event1.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void ButtonLatteMacchinoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         LatteMacchinoButtonActivated.Invoke();
+        if (orderName == "LatteMacchino")
+        {
+            event1.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void ButtonCappuccinoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         CapuccinoButtonActivated.Invoke();
+        if (orderName == "Capuccino")
+        {
+            event1.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void ButtonExpressoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         ExpressoButtonActivated.Invoke();
+        if (orderName == "Expresso")
+        {
+            event1.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void ButtonMacchitoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         MacchitoButtonActivated.Invoke();
+        if (orderName == "Macchito")
+        {
+            event1.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void ButtonIrishCoffeeOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         IrishCoffeeButtonActivated.Invoke();
+        if (orderName == "IrishCoffee")
+        {
+            event1.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void ButtonLongBlackOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         LongBlackButtonActivated.Invoke();
+        if (orderName == "LongBlack")
+        {
+            event1.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void Buttonx1OnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         x1ButtonActivated.Invoke();
+        if (orderAmount == 1)
+        {
+            event2.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
 
     private void Buttonx2OnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         x2ButtonActivated.Invoke();
+        if (orderAmount == 2)
+        {
+            event2.Raise();
+        }
+        else
+        {
+            eventIncorrect.Raise();
+        }
     }
     #endregion
 }

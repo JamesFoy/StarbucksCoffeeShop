@@ -5,10 +5,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameEvent : ScriptableObject
 {
-    public AudioClip correctClip;
-    public AudioClip incorrectClip;
-
-    public bool correctEvent;
+    public bool isCorrect;
+    bool hasBeenRaised;
 
     //When you create a game event create a new empty list of things listening to it
     public List<GameEventListener> listeners = new List<GameEventListener>();
@@ -18,17 +16,14 @@ public class GameEvent : ScriptableObject
     {
         for (int i = listeners.Count - 1; i >= 0; i--)
         {
-            listeners[i].OnEventRaised();
-
-            if (correctEvent)
+            if (!hasBeenRaised)
             {
-                //play correct audio sound
-            }
-            else
-            {
-                //play incorrect audio sound
+                hasBeenRaised = true;
+                listeners[i].OnEventRaised();
             }
         }
+
+        hasBeenRaised = false;
     }
 
     //Tell the event "This is listening"

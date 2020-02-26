@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1f5c7a0b0eb094397621665ce03215, type: 3}
   m_Name: Cappuccino 2
   m_EditorClassIdentifier: 
+  isCorrect: 1
   listeners: []

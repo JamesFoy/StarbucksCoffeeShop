@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1f5c7a0b0eb094397621665ce03215, type: 3}
   m_Name: CaffeeAmericano 3
   m_EditorClassIdentifier: 
-  correctClip: {fileID: 8300000, guid: 36bf3952083ff594f833059776712edf, type: 3}
-  incorrectClip: {fileID: 8300000, guid: ac729b8899a614343b443ef0b443d734, type: 3}
-  correctEvent: 1
+  isCorrect: 1
   listeners: []
