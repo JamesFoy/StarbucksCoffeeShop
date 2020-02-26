@@ -297,6 +297,7 @@ namespace VRTK.Controllables.ArtificialBased
         protected virtual void SetToRestingPosition()
         {
             positionLerpRoutine = StartCoroutine(PositionLerp(Vector3.Lerp(originalLocalPosition, PressedPosition(), restingPosition), returnSpeed));
+            transform.parent.parent.parent.gameObject.SetActive(false);
         }
     }
 }

@@ -17,6 +17,9 @@ public class ButtonReset : MonoBehaviour
 
     private void OnDisable()
     {
-        
+        Debug.Log("ResetButton");
+        button.SetPositionTarget(0);
+        button.atMaxLimit = false;
+        button.SetStayPressed(false);
     }
 }

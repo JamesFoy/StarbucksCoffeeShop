@@ -94,7 +94,7 @@ namespace VRTK.Controllables
         protected Quaternion originalLocalRotation;
         protected Vector3 actualTransformPosition;
         protected bool atMinLimit;
-        protected bool atMaxLimit;
+        public bool atMaxLimit;
         protected Collider interactingCollider;
         protected VRTK_InteractTouch interactingTouchScript;
         protected Collider[] controlColliders = new Collider[0];
