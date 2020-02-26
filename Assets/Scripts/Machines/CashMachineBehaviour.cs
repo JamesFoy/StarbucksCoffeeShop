@@ -6,9 +6,12 @@ using UnityEngine.Events;
 using VRTK;
 using VRTK.Controllables;
 using VRTK.Controllables.ArtificialBased;
+using TMPro;
 
 public class CashMachineBehaviour : MonoBehaviour
 {
+    public TMP_Text orderText;
+
     public GameEvent event1;
     public GameEvent event2;
     public GameEvent event3;
