@@ -10,6 +10,30 @@ using TMPro;
 
 public class CashMachineBehaviour : MonoBehaviour
 {
+    #region Singleton Setup
+    private static CashMachineBehaviour instance = null;
+
+    public static CashMachineBehaviour Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+    #endregion
+
     #region Enums
     public enum CoffeeChoice { FlatWhite, CaffeAmericano, Frappe, LatteMacchiato, Cappuccino, Expresso, Macchito, IrishCoffee, LongBlack };
     public CoffeeChoice choice;

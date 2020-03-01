@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MacchitoOrder
   m_EditorClassIdentifier: Assembly-CSharp::Order
   orderName: Macchito
-  orderDescription: 
-  orderCorrect: 
-  orderIncorrect: 
+  orderDescription: Hi, could i please get a macchito, Thanks
+  orderCorrect: Thanks so much, this is exactly what i wanted
+  orderIncorrect: I dont think that this is what i ordered.
   stepsEvent:
   - {fileID: 11400000, guid: 7bbb7554a43530347917c01047161eb7, type: 2}
   - {fileID: 11400000, guid: 582b7988a58583744b9cf95b7d7c3837, type: 2}

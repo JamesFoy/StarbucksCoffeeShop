@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: LatteMacchitoOrder
   m_EditorClassIdentifier: Assembly-CSharp::Order
   orderName: LatteMacchiato
-  orderDescription: 
-  orderCorrect: 
-  orderIncorrect: 
+  orderDescription: Hi, could i please get a latte macchito, Thanks
+  orderCorrect: Thanks so much, this is exactly what i wanted
+  orderIncorrect: I dont think that this is what i ordered.
   stepsEvent:
   - {fileID: 11400000, guid: 150aa36f424061542bb9bf949a8404d6, type: 2}
   - {fileID: 11400000, guid: e6a3b96546a297241837de7873badc22, type: 2}

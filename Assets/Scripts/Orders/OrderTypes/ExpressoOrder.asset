@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ExpressoOrder
   m_EditorClassIdentifier: Assembly-CSharp::Order
   orderName: Expresso
-  orderDescription: 
-  orderCorrect: 
-  orderIncorrect: 
+  orderDescription: Hi, could i please get a expresso, Thanks
+  orderCorrect: Thanks so much, this is exactly what i wanted
+  orderIncorrect: I dont think that this is what i ordered.
   stepsEvent:
   - {fileID: 11400000, guid: 575bcbe25de485f49a621bd14479f0ab, type: 2}
   - {fileID: 11400000, guid: fb3cd1f796de72f4d96d28a82ae10c6f, type: 2}

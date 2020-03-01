@@ -6276,7 +6276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1866451277
 Transform:
   m_ObjectHideFlags: 0
@@ -8129,6 +8129,7 @@ MonoBehaviour:
   choice: 0
   amountChoice: 0
   orderPaymentText: {fileID: 1841804488}
+  orderPriceText: {fileID: 421077385}
   showOrderInfo: 0
   orderText: {fileID: 1841804488}
   event1: {fileID: 0}

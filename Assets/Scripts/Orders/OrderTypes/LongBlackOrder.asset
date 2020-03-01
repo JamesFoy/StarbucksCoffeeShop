@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: LongBlackOrder
   m_EditorClassIdentifier: Assembly-CSharp::Order
   orderName: LongBlack
-  orderDescription: 
-  orderCorrect: 
-  orderIncorrect: 
+  orderDescription: Hi, could i please get a long black, Thanks
+  orderCorrect: Thanks so much, this is exactly what i wanted
+  orderIncorrect: I dont think that this is what i ordered.
   stepsEvent:
   - {fileID: 11400000, guid: 59a9a7bcd39fddc4894de42de93b853e, type: 2}
   - {fileID: 11400000, guid: 6b18c7da86fbdf342a608f131f126994, type: 2}

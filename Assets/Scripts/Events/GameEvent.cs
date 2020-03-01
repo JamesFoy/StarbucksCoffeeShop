@@ -18,7 +18,7 @@ public class GameEvent : ScriptableObject
         {
             if (!hasBeenRaised)
             {
-                hasBeenRaised = true;
+                //hasBeenRaised = true;
                 listeners[i].OnEventRaised();
             }
         }

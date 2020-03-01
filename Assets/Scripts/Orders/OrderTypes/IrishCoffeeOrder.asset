@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: IrishCoffeeOrder
   m_EditorClassIdentifier: Assembly-CSharp::Order
   orderName: IrishCoffee
-  orderDescription: 
-  orderCorrect: 
-  orderIncorrect: 
+  orderDescription: Hi, could i please get a irish coffee, Thanks
+  orderCorrect: Thanks so much, this is exactly what i wanted
+  orderIncorrect: I dont think that this is what i ordered.
   stepsEvent:
   - {fileID: 11400000, guid: f1865c16d4969564287e49b8f0ef8109, type: 2}
   - {fileID: 11400000, guid: 61732924e71b59543b1669244b3f7de0, type: 2}

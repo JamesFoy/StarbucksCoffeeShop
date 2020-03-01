@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: FlatWhiteOrder
   m_EditorClassIdentifier: Assembly-CSharp::Order
   orderName: FlatWhite
-  orderDescription: 
-  orderCorrect: 
-  orderIncorrect: 
+  orderDescription: Hi, could i please get a flat white, Thanks
+  orderCorrect: Thanks so much, this is exactly what i wanted
+  orderIncorrect: I dont think that this is what i ordered.
   stepsEvent:
   - {fileID: 11400000, guid: 9438382d4d9ddc34ca5e395cceb72dfb, type: 2}
   - {fileID: 11400000, guid: 4f015a6c66d3a344e91579e126d1961c, type: 2}
