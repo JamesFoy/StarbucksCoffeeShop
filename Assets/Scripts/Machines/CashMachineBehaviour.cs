@@ -10,14 +10,40 @@ using TMPro;
 
 public class CashMachineBehaviour : MonoBehaviour
 {
+    #region Enums
+    public enum CoffeeChoice { FlatWhite, CaffeAmericano, Frappe, LatteMacchiato, Cappuccino, Expresso, Macchito, IrishCoffee, LongBlack };
+    public CoffeeChoice choice;
+
+    public enum AmountChoice { x1, x2 };
+    public AmountChoice amountChoice;
+    #endregion
+
+    #region Canvas Setup
+    [BoxGroup("UI Stuff")]
+    public TMP_Text orderPaymentText, orderPriceText;
+    int finalCost;
+    float price;
+    int amountChosen;
+    string coffeeName;
+    #endregion
+
+    #region Order Debug Info
+    [BoxGroup("Order Info")]
+    [SerializeField]
+    bool showOrderInfo;
+
+    [BoxGroup("Order Info")]
+    [ShowIf(nameof(showOrderInfo))]
     public TMP_Text orderText;
 
-    public GameEvent event1;
-    public GameEvent event2;
-    public GameEvent event3;
-    public GameEvent eventIncorrect;
+    [BoxGroup("Order Info")]
+    [ShowIf(nameof(showOrderInfo))]
+    public GameEvent event1, event2, event3, eventIncorrect;
 
+    [BoxGroup("Order Info")]
+    [ShowIf(nameof(showOrderInfo))]
     public string orderName;
+    #endregion
 
     #region OrderVaribles
     [BoxGroup("Possible Orders")]
@@ -73,6 +99,7 @@ public class CashMachineBehaviour : MonoBehaviour
     public UnityEvent ConfirmButtonActivated, DeclineButtonActivated;
     #endregion
 
+    #region Start/Update
     // Start is called before the first frame update
     void Start()
     {
@@ -103,6 +130,79 @@ public class CashMachineBehaviour : MonoBehaviour
         AmountSwitch();
         ButtonSwitch();
     }
+
+    private void Update()
+    {
+        #region Enums setting amount variables
+        if (amountChoice == AmountChoice.x1)
+        {
+            amountChosen = 1;
+        }
+        else if (amountChoice == AmountChoice.x2)
+        {
+            amountChosen = 2;
+        }
+        #endregion
+
+        #region Enums setting coffee string variables
+        if (choice == CoffeeChoice.FlatWhite)
+        {
+            coffeeName = "Flat White";
+            price = 2.50f;
+        }
+        else if (choice == CoffeeChoice.CaffeAmericano)
+        {
+            coffeeName = "Caffe Americano";
+            price = 2.45f;
+        }
+        else if (choice == CoffeeChoice.Frappe)
+        {
+            coffeeName = "Frappe";
+        }
+        else if (choice == CoffeeChoice.LatteMacchiato)
+        {
+            coffeeName = "Latte Macchiato";
+            price = 2.85f;
+        }
+        else if (choice == CoffeeChoice.Cappuccino)
+        {
+            coffeeName = "Cappuccino";
+            price = 2.85f;
+        }
+        else if (choice == CoffeeChoice.Expresso)
+        {
+            coffeeName = "Expresso";
+            price = 1.90f;
+        }
+        else if (choice == CoffeeChoice.Macchito)
+        {
+            coffeeName = "Macchito";
+            price = 2.50f;
+        }
+        else if (choice == CoffeeChoice.IrishCoffee)
+        {
+            coffeeName = "Irish Coffe";
+            price = 7.80f;
+        }
+        else if (choice == CoffeeChoice.LongBlack)
+        {
+            coffeeName = "Long Black";
+            price = 2.73f;
+        }
+        #endregion
+
+        orderPaymentText.text = " You chose x" + amountChosen + " : " + coffeeName;
+        orderPriceText.text = "Payment Required = Total: £" + finalCost;
+    }
+    #endregion
+
+    #region HelperFunctions
+    public void CostPrice(int amount)
+    {
+        finalCost = Mathf.RoundToInt(amount * price);
+        Debug.Log(price * amount);
+    }
+    #endregion
 
     #region SwitchStatements
     void AmountSwitch()
@@ -193,6 +293,8 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonFlatWhiteOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         FlatWhiteButtonActivated.Invoke();
+        choice = CoffeeChoice.FlatWhite;
+
         if (orderName == "FlatWhite")
         {
             event1.Raise();
@@ -206,6 +308,8 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonCaffeeAmericanoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         CaffeAmericanoButtonActivated.Invoke();
+        choice = CoffeeChoice.CaffeAmericano;
+
         if (orderName == "CaffeAmericano")
         {
             event1.Raise();
@@ -219,6 +323,8 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonFrappeOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         FrappeButtonActivated.Invoke();
+        choice = CoffeeChoice.Frappe;
+
         if (orderName == "Frappe")
         {
             event1.Raise();
@@ -232,6 +338,8 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonLatteMacchinoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         LatteMacchinoButtonActivated.Invoke();
+        choice = CoffeeChoice.LatteMacchiato;
+
         if (orderName == "LatteMacchino")
         {
             event1.Raise();
@@ -245,6 +353,8 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonCappuccinoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         CapuccinoButtonActivated.Invoke();
+        choice = CoffeeChoice.Cappuccino;
+
         if (orderName == "Capuccino")
         {
             event1.Raise();
@@ -258,6 +368,8 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonExpressoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         ExpressoButtonActivated.Invoke();
+        choice = CoffeeChoice.Expresso;
+
         if (orderName == "Expresso")
         {
             event1.Raise();
@@ -271,6 +383,8 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonMacchitoOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         MacchitoButtonActivated.Invoke();
+        choice = CoffeeChoice.Macchito;
+
         if (orderName == "Macchito")
         {
             event1.Raise();
@@ -284,6 +398,8 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonIrishCoffeeOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         IrishCoffeeButtonActivated.Invoke();
+        choice = CoffeeChoice.IrishCoffee;
+
         if (orderName == "IrishCoffee")
         {
             event1.Raise();
@@ -297,6 +413,8 @@ public class CashMachineBehaviour : MonoBehaviour
     private void ButtonLongBlackOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         LongBlackButtonActivated.Invoke();
+        choice = CoffeeChoice.LongBlack;
+
         if (orderName == "LongBlack")
         {
             event1.Raise();
@@ -310,6 +428,9 @@ public class CashMachineBehaviour : MonoBehaviour
     private void Buttonx1OnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         x1ButtonActivated.Invoke();
+        amountChoice = AmountChoice.x1;
+        CostPrice(amountChosen);
+
         if (orderAmount == 1)
         {
             event2.Raise();
@@ -323,6 +444,9 @@ public class CashMachineBehaviour : MonoBehaviour
     private void Buttonx2OnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         x2ButtonActivated.Invoke();
+        amountChoice = AmountChoice.x2;
+        CostPrice(amountChosen);
+
         if (orderAmount == 2)
         {
             event2.Raise();

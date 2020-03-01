@@ -1214,6 +1214,18 @@ MonoBehaviour:
     fallbackTypeName: VRTK.SDK_FallbackController
     typeName: VRTK.SDK_SimController
     descriptionIndex: 0
+--- !u!114 &421077385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 421077385, guid: 6b0e43d532235cb42a00318d2c189e4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 280787840554750304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &439345622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,18 +1548,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &578859983 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1841804488, guid: 6b0e43d532235cb42a00318d2c189e4f,
-    type: 3}
-  m_PrefabInstance: {fileID: 280787840554750304}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &587007289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,6 +3253,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927949636}
   m_CullTransparentMesh: 0
+--- !u!114 &938830476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 280787840554750304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e56c6a07ac4bef43a936e39ea1b94be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1006037608
 GameObject:
   m_ObjectHideFlags: 0
@@ -7029,6 +7041,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: CashRegister
       objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: x1ButtonActivated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: orderPriceText
+      value: 
+      objectReference: {fileID: 421077385}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: showConfirmSettings
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: showAmountSettings
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: x1ButtonActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: x1ButtonActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: x1ButtonActivated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: x1ButtonActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 938830476}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: showOrderInfo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866451276, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 280787841155778487, guid: 6b0e43d532235cb42a00318d2c189e4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7083,14 +7135,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
-      propertyPath: orderText
-      value: 
-      objectReference: {fileID: 578859983}
-    - target: {fileID: 1841804486, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
-      propertyPath: m_Name
-      value: Order Text
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
