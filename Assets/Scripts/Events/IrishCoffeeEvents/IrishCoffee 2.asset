@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: IrishCoffee 2
   m_EditorClassIdentifier: 
   isCorrect: 1
+  previousEvent: {fileID: 11400000, guid: f1865c16d4969564287e49b8f0ef8109, type: 2}
   listeners: []
+  npcListeners: []

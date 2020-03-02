@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: LongBlack 3
   m_EditorClassIdentifier: 
   isCorrect: 1
+  previousEvent: {fileID: 11400000, guid: 6b18c7da86fbdf342a608f131f126994, type: 2}
   listeners: []
+  npcListeners: []

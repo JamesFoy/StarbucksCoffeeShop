@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Macchito 3
   m_EditorClassIdentifier: 
   isCorrect: 1
+  previousEvent: {fileID: 11400000, guid: 582b7988a58583744b9cf95b7d7c3837, type: 2}
   listeners: []
+  npcListeners: []

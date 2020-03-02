@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: LatteMacchiato 2
   m_EditorClassIdentifier: 
   isCorrect: 1
+  previousEvent: {fileID: 11400000, guid: 150aa36f424061542bb9bf949a8404d6, type: 2}
   listeners: []
+  npcListeners: []

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: FlatWhite 3
   m_EditorClassIdentifier: 
   isCorrect: 1
+  previousEvent: {fileID: 11400000, guid: 4f015a6c66d3a344e91579e126d1961c, type: 2}
   listeners: []
+  npcListeners: []

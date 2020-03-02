@@ -11,6 +11,8 @@ public class GameEvent : ScriptableObject
     //When you create a game event create a new empty list of things listening to it
     public List<GameEventListener> listeners = new List<GameEventListener>();
 
+    public List<NPCGameEventListener> npcListeners = new List<NPCGameEventListener>();
+
     //trigger event and find every listener for the event and trigger it on them
     public void Raise()
     {
@@ -18,12 +20,17 @@ public class GameEvent : ScriptableObject
         {
             if (!hasBeenRaised)
             {
-                //hasBeenRaised = true;
+                hasBeenRaised = true;
                 listeners[i].OnEventRaised();
             }
         }
 
         hasBeenRaised = false;
+
+        for (int i = npcListeners.Count - 1; i >= 0; i--)
+        {
+            npcListeners[i].OnEventRaised();
+        }
     }
 
     //Tell the event "This is listening"
@@ -35,5 +42,16 @@ public class GameEvent : ScriptableObject
     public void UnregisterListener(GameEventListener listener)
     {
         listeners.Remove(listener);
+    }
+
+    //Tell the event "This is listening"
+    public void RegisterListener(NPCGameEventListener npcListener)
+    {
+        npcListeners.Add(npcListener);
+    }
+
+    public void UnregisterListener(NPCGameEventListener npcListener)
+    {
+        npcListeners.Remove(npcListener);
     }
 }

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Expresso 3
   m_EditorClassIdentifier: 
   isCorrect: 1
+  previousEvent: {fileID: 11400000, guid: fb3cd1f796de72f4d96d28a82ae10c6f, type: 2}
   listeners: []
+  npcListeners: []

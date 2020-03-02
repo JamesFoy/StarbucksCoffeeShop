@@ -10,6 +10,8 @@ public class ManagerUI : MonoBehaviour
     public TMP_Text correctText;
     public TMP_Text incorrectText;
 
+    CashMachineBehaviour cashMachine;
+
     int correctScore;
     int incorrectScore;
 
@@ -38,6 +40,8 @@ public class ManagerUI : MonoBehaviour
     {
         correctScore = 0;
         incorrectScore = 0;
+
+        cashMachine = CashMachineBehaviour.Instance;
     }
 
     // Update is called once per frame
@@ -57,5 +61,10 @@ public class ManagerUI : MonoBehaviour
         {
             incorrectScore++;
         }
-    }           
+    }          
+    
+    public void NewOrder()
+    {
+        cashMachine.GenerateOrder();
+    }
 }

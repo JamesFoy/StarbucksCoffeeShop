@@ -127,32 +127,7 @@ public class CashMachineBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentOrder = PossibleOrders[UnityEngine.Random.Range(0, PossibleOrders.Count)];
-        orderAmount = amounts[UnityEngine.Random.Range(0, amounts.Count)];
-
-        orderName = currentOrder.orderName;
-        Debug.Log("Current order is " + orderName + " with an amount of " + orderAmount);
-
-        event1 = currentOrder.stepsEvent[0];
-        event2 = currentOrder.stepsEvent[1];
-        event3 = currentOrder.stepsEvent[2];
-        eventIncorrect = currentOrder.stepsEvent[3];
-
-        confirm.gameObject.GetComponent<GameEventListener>().Event = event3;
-        decline.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-
-        FlatWhite.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-        CaffeAmericano.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-        Frappe.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-        LatteMacchino.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-        Cappuccino.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-        Expresso.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-        Macchito.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-        IrishCoffee.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-        LongBlack.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
-
-        AmountSwitch();
-        ButtonSwitch();
+        GenerateOrder();
     }
 
     private void Update()
@@ -225,6 +200,36 @@ public class CashMachineBehaviour : MonoBehaviour
     {
         finalCost = Mathf.RoundToInt(amount * price);
         Debug.Log(price * amount);
+    }
+
+    public void GenerateOrder()
+    {
+        currentOrder = PossibleOrders[UnityEngine.Random.Range(0, PossibleOrders.Count)];
+        orderAmount = amounts[UnityEngine.Random.Range(0, amounts.Count)];
+
+        orderName = currentOrder.orderName;
+        Debug.Log("Current order is " + orderName + " with an amount of " + orderAmount);
+
+        event1 = currentOrder.stepsEvent[0];
+        event2 = currentOrder.stepsEvent[1];
+        event3 = currentOrder.stepsEvent[2];
+        eventIncorrect = currentOrder.stepsEvent[3];
+
+        confirm.gameObject.GetComponent<GameEventListener>().Event = event3;
+        decline.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+
+        FlatWhite.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+        CaffeAmericano.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+        Frappe.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+        LatteMacchino.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+        Cappuccino.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+        Expresso.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+        Macchito.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+        IrishCoffee.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+        LongBlack.gameObject.GetComponent<GameEventListener>().Event = eventIncorrect;
+
+        AmountSwitch();
+        ButtonSwitch();
     }
     #endregion
 

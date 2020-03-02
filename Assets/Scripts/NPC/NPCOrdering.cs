@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class NPCOrdering : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class NPCOrdering : MonoBehaviour
     GameObject triggers;
 
     [SerializeField]
-    GameEventListener correct, incorrect;
+    NPCGameEventListener correct, incorrect, reset;
 
     public TMP_Text dialogueTextBox;
 
@@ -21,34 +22,24 @@ public class NPCOrdering : MonoBehaviour
         cashMachine = CashMachineBehaviour.Instance;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
+    {
+        GetOrder();
+    }
+
+    private void GetOrder()
     {
         currentOrder = cashMachine.currentOrder;
-        dialogueTextBox.text = currentOrder.orderDescription;
+
+        currentOrder = cashMachine.currentOrder;
+
+        dialogueTextBox.text = currentOrder.orderDescription + " x" + cashMachine.orderAmount;
 
         correct.Event = currentOrder.stepsEvent[0];
         incorrect.Event = currentOrder.stepsEvent[3];
+        reset.Event = currentOrder.stepsEvent[2];
 
         triggers.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (currentOrder.stepsEvent[0])
-        {
-            correct.Event = currentOrder.stepsEvent[0];
-        }
-        else if (currentOrder.stepsEvent[1])
-        {
-            correct.Event = currentOrder.stepsEvent[1];
-        }
-        else if (currentOrder.stepsEvent[2])
-        {
-            correct.Event = currentOrder.stepsEvent[2];
-        }
     }
 
     public void CorrectStep()
@@ -59,7 +50,13 @@ public class NPCOrdering : MonoBehaviour
     public void IncorrectStep()
     {
         dialogueTextBox.text = currentOrder.orderIncorrect;
+        correct.Event = currentOrder.stepsEvent[1];
     }
 
-
+    public void Reset()
+    {
+        dialogueTextBox.text = currentOrder.orderDescription;
+        correct.Event = currentOrder.stepsEvent[0];
+        incorrect.Event = currentOrder.stepsEvent[3];
+    }
 }

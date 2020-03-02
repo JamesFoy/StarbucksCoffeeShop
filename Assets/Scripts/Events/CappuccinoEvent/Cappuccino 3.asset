@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Cappuccino 3
   m_EditorClassIdentifier: 
   isCorrect: 1
+  previousEvent: {fileID: 11400000, guid: dd44fabd2d4942c44b0355adc5cf991a, type: 2}
   listeners: []
+  npcListeners: []
