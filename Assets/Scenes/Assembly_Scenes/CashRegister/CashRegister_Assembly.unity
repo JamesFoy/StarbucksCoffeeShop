@@ -5927,7 +5927,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ae42ff0674d5bc04ca041119d825105a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7142,11 +7142,131 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
-      propertyPath: showConfirmSettings
-      value: 0
+      propertyPath: showDrinkSettings
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: FlatWhiteButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280787840554750307}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: FlatWhiteButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayResetAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: FlatWhiteButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: CaffeAmericanoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280787840554750307}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: CaffeAmericanoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayResetAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: CaffeAmericanoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: FrappeButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280787840554750307}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: FrappeButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayResetAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: FrappeButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: LatteMacchinoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280787840554750307}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: LatteMacchinoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayResetAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: LatteMacchinoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: CapuccinoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280787840554750307}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: CapuccinoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayResetAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: ExpressoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280787840554750307}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: ExpressoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayResetAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: MacchitoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280787840554750307}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: MacchitoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayResetAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: IrishCoffeeButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280787840554750307}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: IrishCoffeeButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayResetAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: CapuccinoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: ExpressoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: MacchitoButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: IrishCoffeeButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: LongBlackButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280787840554750307}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: LongBlackButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayResetAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 365455911, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+      propertyPath: LongBlackButtonActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b0e43d532235cb42a00318d2c189e4f, type: 3}
+--- !u!114 &280787840554750307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 280787840554750307, guid: 6b0e43d532235cb42a00318d2c189e4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 280787840554750304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551b17bfbc7109e43bd4b336c0e01a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8676065582174263432
 PrefabInstance:
   m_ObjectHideFlags: 0
