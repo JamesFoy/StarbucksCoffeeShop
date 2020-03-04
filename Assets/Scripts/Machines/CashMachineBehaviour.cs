@@ -299,6 +299,9 @@ public class CashMachineBehaviour : MonoBehaviour
 
         x1.MaxLimitReached += Buttonx1OnMaxLimitReached;
         x2.MaxLimitReached += Buttonx2OnMaxLimitReached;
+
+        confirm.MaxLimitReached += ButtonConfirmOnMaxLimitReached;
+        decline.MaxLimitReached += ButtonDeclineOnMaxLimitReached;
     }
 
     void OnDisable()
@@ -315,6 +318,9 @@ public class CashMachineBehaviour : MonoBehaviour
 
         x1.MaxLimitReached -= Buttonx1OnMaxLimitReached;
         x2.MaxLimitReached -= Buttonx2OnMaxLimitReached;
+
+        confirm.MaxLimitReached -= ButtonConfirmOnMaxLimitReached;
+        decline.MaxLimitReached -= ButtonDeclineOnMaxLimitReached;
     }
     #endregion
 
@@ -484,6 +490,18 @@ public class CashMachineBehaviour : MonoBehaviour
         {
             eventIncorrect.Raise();
         }
+    }
+
+    private void ButtonConfirmOnMaxLimitReached(object sender, ControllableEventArgs e)
+    {
+        ConfirmButtonActivated.Invoke();
+        event3.Raise();
+    }
+
+    private void ButtonDeclineOnMaxLimitReached(object sender, ControllableEventArgs e)
+    {
+        DeclineButtonActivated.Invoke();
+        event3.Raise();
     }
     #endregion
 }

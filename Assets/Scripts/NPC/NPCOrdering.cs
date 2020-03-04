@@ -20,9 +20,10 @@ public class NPCOrdering : MonoBehaviour
     private void Awake()
     {
         cashMachine = CashMachineBehaviour.Instance;
+
     }
 
-    private void Update()
+    private void Start()
     {
         GetOrder();
     }
@@ -55,8 +56,6 @@ public class NPCOrdering : MonoBehaviour
 
     public void Reset()
     {
-        dialogueTextBox.text = currentOrder.orderDescription;
-        correct.Event = currentOrder.stepsEvent[0];
-        incorrect.Event = currentOrder.stepsEvent[3];
+        GetOrder();
     }
 }
