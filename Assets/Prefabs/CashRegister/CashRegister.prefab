@@ -328,8 +328,8 @@ MonoBehaviour:
   snapDuration: 0
   applyScalingOnSnap: 1
   cloneNewOnUnsnap: 0
-  highlightColor: {r: 0, g: 0, b: 0, a: 0}
-  validHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.042052314, g: 0.990566, b: 0.9148673, a: 0}
+  validHighlightColor: {r: 0.28449082, g: 1, b: 0, a: 0}
   highlightAlwaysActive: 0
   validObjectListPolicy: {fileID: 7701120323836443750}
   displayDropZoneInEditor: 1
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed2aa1a29b92ca4f84a26a5f6e9218b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  operation: 0
+  operation: 1
   checkType: 1
   identifiers:
   - EmployeeCard
@@ -739,6 +739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551b17bfbc7109e43bd4b336c0e01a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quantityCanvas: {fileID: 181593850}
+  paymentCanvas: {fileID: 1866451276}
   currentButtonCanvas: 1
 --- !u!1 &195702254
 GameObject:
@@ -1597,7 +1599,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 632060901}
-  - component: {fileID: 812565533}
   m_Layer: 0
   m_Name: CancalButton
   m_TagString: Untagged
@@ -1620,18 +1621,6 @@ Transform:
   m_Father: {fileID: 841702569}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &812565533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632060900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb645db884676a64caea0574e9c03a33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &669125002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,6 +2022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551b17bfbc7109e43bd4b336c0e01a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quantityCanvas: {fileID: 181593850}
+  paymentCanvas: {fileID: 1866451276}
   currentButtonCanvas: 0
 --- !u!1 &814779402
 GameObject:
@@ -2312,7 +2303,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 844838571}
-  - component: {fileID: 320248751}
   m_Layer: 0
   m_Name: ConfirmButton
   m_TagString: Untagged
@@ -2335,18 +2325,6 @@ Transform:
   m_Father: {fileID: 841702569}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &320248751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844838570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb645db884676a64caea0574e9c03a33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &863501010
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,7 +5210,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1562902300}
-  - component: {fileID: 1152832608}
   m_Layer: 0
   m_Name: x2Button
   m_TagString: Untagged
@@ -5255,18 +5232,6 @@ Transform:
   m_Father: {fileID: 2032719500}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1152832608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562902299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb645db884676a64caea0574e9c03a33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1573920922
 GameObject:
   m_ObjectHideFlags: 0
@@ -6403,6 +6368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551b17bfbc7109e43bd4b336c0e01a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quantityCanvas: {fileID: 181593850}
+  paymentCanvas: {fileID: 1866451276}
   currentButtonCanvas: 2
 --- !u!1 &1869171605
 GameObject:
@@ -7094,7 +7061,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2032719500}
-  - component: {fileID: 853117866}
   m_Layer: 0
   m_Name: Buttons
   m_TagString: Untagged
@@ -7118,18 +7084,6 @@ Transform:
   m_Father: {fileID: 181593851}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &853117866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032719499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb645db884676a64caea0574e9c03a33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2039076300
 GameObject:
   m_ObjectHideFlags: 0
@@ -8260,6 +8214,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 22400230e3389a74daddcae818024b51, type: 2}
   currentOrder: {fileID: 0}
   orderAmount: 0
+  paymentReady: 0
   amounts: 0100000002000000
   showDrinkSettings: 0
   FlatWhite: {fileID: 832940626}
@@ -8274,9 +8229,9 @@ MonoBehaviour:
   FlatWhiteButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 280787840554750307}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8290,9 +8245,9 @@ MonoBehaviour:
   CaffeAmericanoButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 280787840554750307}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8306,9 +8261,9 @@ MonoBehaviour:
   FrappeButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 280787840554750307}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8322,9 +8277,9 @@ MonoBehaviour:
   LatteMacchinoButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 280787840554750307}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8338,9 +8293,9 @@ MonoBehaviour:
   CapuccinoButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 280787840554750307}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8354,9 +8309,9 @@ MonoBehaviour:
   ExpressoButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 280787840554750307}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8370,9 +8325,9 @@ MonoBehaviour:
   MacchitoButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 280787840554750307}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8386,9 +8341,9 @@ MonoBehaviour:
   IrishCoffeeButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 280787840554750307}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8402,9 +8357,9 @@ MonoBehaviour:
   LongBlackButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 280787840554750307}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8421,32 +8376,32 @@ MonoBehaviour:
   x1ButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1866451276}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1962234655}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   x2ButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1866451276}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1962234655}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -8455,37 +8410,26 @@ MonoBehaviour:
   decline: {fileID: 1200221249}
   ConfirmButtonActivated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1607748790}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   DeclineButtonActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 794558595}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 181593850}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1866451276}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1607748790}
+        m_MethodName: PlayResetAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

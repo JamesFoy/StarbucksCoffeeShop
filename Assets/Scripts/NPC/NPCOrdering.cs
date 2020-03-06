@@ -9,6 +9,11 @@ public class NPCOrdering : MonoBehaviour
     public Order currentOrder;
     CashMachineBehaviour cashMachine;
 
+    Animator anim;
+
+    public enum PaymentTypes { Cash, Card };
+    public PaymentTypes paymentType;
+
     [SerializeField]
     GameObject triggers;
 
@@ -20,12 +25,25 @@ public class NPCOrdering : MonoBehaviour
     private void Awake()
     {
         cashMachine = CashMachineBehaviour.Instance;
-
     }
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
         GetOrder();
+        paymentType = UnityEngine.Random.value < .5 ? PaymentTypes.Cash : PaymentTypes.Card;
+    }
+
+    private void Update()
+    {
+        if (paymentType == PaymentTypes.Cash && cashMachine.paymentReady)
+        {
+            anim.SetTrigger("CashPayment");
+        }
+        else if (paymentType == PaymentTypes.Card && cashMachine.paymentReady)
+        {
+            anim.SetTrigger("CardPayment");
+        }
     }
 
     private void GetOrder()

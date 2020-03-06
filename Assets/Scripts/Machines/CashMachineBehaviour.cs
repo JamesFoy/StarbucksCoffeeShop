@@ -76,9 +76,12 @@ public class CashMachineBehaviour : MonoBehaviour
     public Order currentOrder;
     [BoxGroup("Current Order")]
     public int orderAmount;
+    [BoxGroup("CurrentOrder")]
+    public bool paymentReady;
 
     [BoxGroup("Order Amounts")]
     public List<int> amounts;
+
     #endregion
 
     #region DrinkPusherSetups
@@ -128,6 +131,7 @@ public class CashMachineBehaviour : MonoBehaviour
     void Start()
     {
         GenerateOrder();
+        paymentReady = false;
     }
 
     private void Update()
@@ -496,12 +500,14 @@ public class CashMachineBehaviour : MonoBehaviour
     {
         ConfirmButtonActivated.Invoke();
         event3.Raise();
+        paymentReady = true;
     }
 
     private void ButtonDeclineOnMaxLimitReached(object sender, ControllableEventArgs e)
     {
         DeclineButtonActivated.Invoke();
         event3.Raise();
+        paymentReady = false;
     }
     #endregion
 }
