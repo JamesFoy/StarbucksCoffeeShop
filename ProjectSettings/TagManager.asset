@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EmployeeCard
   - Floor
+  - Money
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - 
   - NPC
-  - 
+  - PostProcessing
   - 
   - 
   - 

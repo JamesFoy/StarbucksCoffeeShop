@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using VRTK;
+using VRTK.Controllables;
+using VRTK.Controllables.ArtificialBased;
 
 public class NPCOrdering : MonoBehaviour
 {
+    public GameObject changeDropZone;
+
     public Order currentOrder;
     CashMachineBehaviour cashMachine;
 
@@ -32,13 +37,17 @@ public class NPCOrdering : MonoBehaviour
         anim = GetComponent<Animator>();
         GetOrder();
         paymentType = UnityEngine.Random.value < .5 ? PaymentTypes.Cash : PaymentTypes.Card;
+        //changeDropZone.SetActive(false);
     }
 
     private void Update()
     {
+        GetOrder();
+
         if (paymentType == PaymentTypes.Cash && cashMachine.paymentReady)
         {
             anim.SetTrigger("CashPayment");
+            changeDropZone.SetActive(true);
         }
         else if (paymentType == PaymentTypes.Card && cashMachine.paymentReady)
         {
@@ -74,6 +83,7 @@ public class NPCOrdering : MonoBehaviour
 
     public void Reset()
     {
+        cashMachine.GenerateOrder();
         GetOrder();
     }
 }

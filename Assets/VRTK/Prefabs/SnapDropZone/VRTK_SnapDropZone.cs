@@ -78,6 +78,8 @@ namespace VRTK
         public VRTK_PolicyList validObjectListPolicy;
         [Tooltip("If this is checked then the drop zone highlight section will be displayed in the scene editor window.")]
         public bool displayDropZoneInEditor = true;
+        [Tooltip("Set if snapped object with become child on snap.")]
+        public bool setObjectAsChild;
 
         [Tooltip("The Interactable Object to snap into the dropzone when the drop zone is enabled. The Interactable Object must be valid in any given policy list to snap.")]
         public VRTK_InteractableObject defaultSnappedInteractableObject;
@@ -706,6 +708,7 @@ namespace VRTK
 
                     isSnapped = true;
                     currentSnappedObject = interactableObjectCheck;
+
                     if (cloneNewOnUnsnap)
                     {
                         CreatePermanentClone();
