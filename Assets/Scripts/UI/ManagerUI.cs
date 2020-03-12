@@ -63,6 +63,8 @@ public class ManagerUI : MonoBehaviour
         }
     }          
     
+    //needs to be changed to a list of NPC's to find the current NPC at the till,
+    //this will make sure that the current NPC dialogue is updated as well
     public void NewOrder()
     {
         cashMachine.GenerateOrder();

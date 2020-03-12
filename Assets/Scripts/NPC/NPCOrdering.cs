@@ -34,6 +34,8 @@ public class NPCOrdering : MonoBehaviour
 
     private void Start()
     {
+        GetOrder();
+
         anim = GetComponent<Animator>();
         GetOrder();
         paymentType = UnityEngine.Random.value < .5 ? PaymentTypes.Cash : PaymentTypes.Card;
@@ -42,8 +44,6 @@ public class NPCOrdering : MonoBehaviour
 
     private void Update()
     {
-        GetOrder();
-
         if (paymentType == PaymentTypes.Cash && cashMachine.paymentReady)
         {
             anim.SetTrigger("CashPayment");
@@ -57,8 +57,6 @@ public class NPCOrdering : MonoBehaviour
 
     private void GetOrder()
     {
-        currentOrder = cashMachine.currentOrder;
-
         currentOrder = cashMachine.currentOrder;
 
         dialogueTextBox.text = currentOrder.orderDescription + " x" + cashMachine.orderAmount;
