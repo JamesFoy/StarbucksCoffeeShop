@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2513735756501902670
 Transform:
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 3564798640827226149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.910765, y: 0.6579798, z: -0.14088826}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0869565, y: 1.0869565, z: 1.0869565}
   m_Children:
   - {fileID: 8318794273743339960}
   - {fileID: 2595920689122177891}
@@ -210,6 +210,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeCupLid
       objectReference: {fileID: 0}
+    - target: {fileID: 1271860195020366848, guid: 0467bc206a8e5994e8d1bae2ebaac85e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0467bc206a8e5994e8d1bae2ebaac85e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -275,6 +280,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6590115
       objectReference: {fileID: 0}
+    - target: {fileID: 1927229330744144465, guid: 0467bc206a8e5994e8d1bae2ebaac85e,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0467bc206a8e5994e8d1bae2ebaac85e, type: 3}
 --- !u!4 &8318794273743339960 stripped
@@ -294,6 +304,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6bb5b31df80333045a5b1f329d70c7b5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6bb5b31df80333045a5b1f329d70c7b5,
         type: 3}
@@ -359,6 +374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.65901124
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 6bb5b31df80333045a5b1f329d70c7b5,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bb5b31df80333045a5b1f329d70c7b5, type: 3}

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6175804522975299372}
   m_LocalRotation: {x: -0.5, y: 0.50000006, z: 0.50000006, w: 0.5}
   m_LocalPosition: {x: 2.71, y: 0.827, z: 0.708}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.086957, y: 1.086957, z: 1.086957}
   m_Children:
   - {fileID: 4804997377365401299}
   - {fileID: 8500524694770493947}
@@ -95,9 +95,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
+  m_ReceiveGI: 2
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
+  m_IgnoreNormalsForChartDetection: 1
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
   m_SelectedEditorRenderState: 3
@@ -195,6 +195,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &4754274361003671387 stripped
@@ -289,6 +299,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -385,6 +405,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &4654779336365643513 stripped
@@ -479,6 +509,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -575,6 +615,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &5037258429028360700 stripped
@@ -669,6 +719,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -765,6 +825,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &5373886621542048136 stripped
@@ -859,6 +929,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -955,6 +1035,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &6360234942085478705 stripped
@@ -1049,6 +1139,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -1145,6 +1245,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &6819427009135614170 stripped
@@ -1239,6 +1349,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -1335,6 +1455,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &7870631478431706236 stripped
@@ -1429,6 +1559,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -1525,6 +1665,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &8262861576388168009 stripped
@@ -1619,6 +1769,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -1715,6 +1875,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &8537371164863418765 stripped
@@ -1809,6 +1979,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -1905,6 +2085,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &8717325673387047007 stripped
@@ -1999,6 +2189,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -2095,6 +2295,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &9002404552266276953 stripped
@@ -2189,6 +2399,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -2285,6 +2505,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &1251916840119490511 stripped
@@ -2379,6 +2609,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -2475,6 +2715,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &1416704845520697827 stripped
@@ -2569,6 +2819,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -2665,6 +2925,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &1740822465469890181 stripped
@@ -2759,6 +3029,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
@@ -2855,6 +3135,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1283498
       objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}
 --- !u!4 &2155669512740365186 stripped
@@ -2949,6 +3239,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1283498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097823226990832721, guid: f562cdcf8a42ca54598d28492a8c35e7,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 113.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f562cdcf8a42ca54598d28492a8c35e7, type: 3}

@@ -96,7 +96,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2343405607642799220
 Transform:
@@ -147,7 +147,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 3
   m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -225,6 +225,7 @@ MonoBehaviour:
   - {fileID: 1431785554284734060}
   excludeColliderCheckOn: []
   equalityFidelity: 0.001
+  atMaxLimit: 0
   hingePoint: {fileID: 4135088771012553329}
   angleLimits:
     minimum: 180

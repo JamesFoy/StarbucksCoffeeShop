@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &8448638634423675388
 Transform:
@@ -49,7 +49,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967169
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4919480381377131249
 Transform:
@@ -197,6 +197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6bb5b31df80333045a5b1f329d70c7b5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6bb5b31df80333045a5b1f329d70c7b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -267,6 +272,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9215
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 6bb5b31df80333045a5b1f329d70c7b5,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bb5b31df80333045a5b1f329d70c7b5, type: 3}
 --- !u!4 &9137623015431594177 stripped
@@ -286,6 +296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoffeeCupLid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271860195020366848, guid: 0467bc206a8e5994e8d1bae2ebaac85e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0467bc206a8e5994e8d1bae2ebaac85e,
         type: 3}
@@ -356,6 +371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9215
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927229330744144465, guid: 0467bc206a8e5994e8d1bae2ebaac85e,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0467bc206a8e5994e8d1bae2ebaac85e, type: 3}
