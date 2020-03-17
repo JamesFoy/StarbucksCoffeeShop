@@ -6,7 +6,8 @@ using UnityEngine;
 public class GameEvent : ScriptableObject
 {
     public bool isCorrect;
-    bool hasBeenRaised;
+    bool eventHasBeenRaised;
+    bool npcEventHasBeenRaised;
 
     //When you create a game event create a new empty list of things listening to it
     public List<GameEventListener> listeners = new List<GameEventListener>();
@@ -18,19 +19,25 @@ public class GameEvent : ScriptableObject
     {
         for (int i = listeners.Count - 1; i >= 0; i--)
         {
-            if (!hasBeenRaised)
+            if (!eventHasBeenRaised)
             {
-                hasBeenRaised = true;
+                eventHasBeenRaised = true;
                 listeners[i].OnEventRaised();
             }
         }
 
-        hasBeenRaised = false;
+        eventHasBeenRaised = false;
 
         for (int i = npcListeners.Count - 1; i >= 0; i--)
         {
-            npcListeners[i].OnEventRaised();
+            if (!npcEventHasBeenRaised)
+            {
+                npcEventHasBeenRaised = true;
+                npcListeners[i].OnEventRaised();
+            }
         }
+
+        npcEventHasBeenRaised = false;
     }
 
     //Tell the event "This is listening"

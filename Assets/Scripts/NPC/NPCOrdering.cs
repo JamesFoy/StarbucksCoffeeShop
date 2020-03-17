@@ -4,15 +4,26 @@ using UnityEngine;
 using TMPro;
 using System;
 using VRTK;
+using UnityEngine.AI;
 using VRTK.Controllables;
-using VRTK.Controllables.ArtificialBased;
+using VRTK.Examples;
 
 public class NPCOrdering : MonoBehaviour
 {
     public GameObject changeDropZone;
 
+    public GameObject npcCanvas;
+
     public Order currentOrder;
     CashMachineBehaviour cashMachine;
+
+    bool hasPaid;
+
+    GameManager gameManager;
+    Transform orderPoint;
+    Transform spawnPoint;
+
+    NavMeshAgent agent;
 
     Animator anim;
 
@@ -36,10 +47,15 @@ public class NPCOrdering : MonoBehaviour
     {
         GetOrder();
 
+        npcCanvas.SetActive(false);
+        gameManager = GameManager.Instance;
+        orderPoint = gameManager.transform.Find("OrderPoint");
+        spawnPoint = gameManager.transform.Find("SpawnPoint");
         anim = GetComponent<Animator>();
         GetOrder();
         paymentType = UnityEngine.Random.value < .5 ? PaymentTypes.Cash : PaymentTypes.Card;
-        //changeDropZone.SetActive(false);
+        changeDropZone.SetActive(false);
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -49,10 +65,49 @@ public class NPCOrdering : MonoBehaviour
             anim.SetTrigger("CashPayment");
             changeDropZone.SetActive(true);
         }
-        else if (paymentType == PaymentTypes.Card && cashMachine.paymentReady)
+        else if (paymentType == PaymentTypes.Card && cashMachine.paymentReady && !hasPaid)
         {
+            hasPaid = true;
             anim.SetTrigger("CardPayment");
+            StartCoroutine(WaitTillAnimEnd(3.7f));
         }
+
+        if (agent.remainingDistance > 0)
+        {
+            anim.SetBool("Walk", true);
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+            transform.rotation = Quaternion.Lerp(transform.rotation, orderPoint.rotation, 1);
+            NpcCanvasActive(true);
+        }
+    }
+
+    void NpcCanvasActive(bool isActive)
+    {
+        npcCanvas.SetActive(isActive);
+    }
+
+    public void NpcLeave()
+    {
+        agent.SetDestination(spawnPoint.position);
+        StartCoroutine(NpcLeavingCafe());
+    }
+
+    IEnumerator NpcLeavingCafe()
+    {
+        yield return new WaitForSeconds(3.5f);
+        cashMachine.GenerateOrder();
+        gameManager.SpawnNewNpc();
+        Destroy(this.gameObject);
+    }
+
+    IEnumerator WaitTillAnimEnd(float animLength)
+    {
+        yield return new WaitForSeconds(animLength);
+        NpcLeave();
+        yield return null;
     }
 
     private void GetOrder()

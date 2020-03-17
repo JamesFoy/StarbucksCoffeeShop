@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 179615354}
   - component: {fileID: 179615353}
   - component: {fileID: 179615352}
-  - component: {fileID: 179615351}
+  - component: {fileID: 76842711}
   m_Layer: 8
   m_Name: CashDropZone
   m_TagString: Untagged
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightObjectPrefab: {fileID: 2536258979091822823, guid: c09b017b3dd483b49bc37851cd4448a8,
     type: 3}
-  snapType: 0
+  snapType: 2
   snapDuration: 0
   applyScalingOnSnap: 1
   cloneNewOnUnsnap: 0
@@ -325,7 +325,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16499108, y: 0.090608, z: 0.15813929}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &179615351
+--- !u!114 &76842711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -350,12 +350,34 @@ MonoBehaviour:
   OnObjectSnappedToDropZone:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetParent
-        m_Mode: 2
+      - m_Target: {fileID: 5407848790065714066}
+        m_MethodName: SetTrigger
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 179615350}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Paid
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 912996272}
+        m_MethodName: NpcLeave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 570608218}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -365,18 +387,7 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectUnsnappedFromDropZone:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetParent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &209328833
@@ -406,7 +417,7 @@ RectTransform:
   m_GameObject: {fileID: 209328833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.970387, y: 2.3872445, z: 5.30541}
+  m_LocalScale: {x: 8.970387, y: 3.1115346, z: 5.30541}
   m_Children: []
   m_Father: {fileID: 1845266107}
   m_RootOrder: 0
@@ -437,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1251,8 +1262,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Hi, can I please get 1 cappuccino please!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f367213d5c075e94ba8bd9caec52bbe8, type: 2}
+  m_sharedMaterial: {fileID: 1303718842637377810, guid: f367213d5c075e94ba8bd9caec52bbe8,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1283,7 +1295,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2673,6 +2685,7 @@ GameObject:
   - component: {fileID: 6988529844258666608}
   - component: {fileID: 6988529844258666611}
   - component: {fileID: 912996272}
+  - component: {fileID: 921537199}
   m_Layer: 8
   m_Name: NPCRemy
   m_TagString: Untagged
@@ -2688,7 +2701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431533128952237307}
   m_LocalRotation: {x: -0, y: -1, z: 0, w: -0.0000001872535}
-  m_LocalPosition: {x: 0.59652, y: 0, z: 1.5426}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.92, y: 0.92, z: 0.92}
   m_Children:
   - {fileID: 3287935073500526667}
@@ -2766,6 +2779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeDropZone: {fileID: 570608218}
+  npcCanvas: {fileID: 642142093}
   currentOrder: {fileID: 0}
   paymentType: 0
   triggers: {fileID: 2043664972}
@@ -2773,6 +2787,28 @@ MonoBehaviour:
   incorrect: {fileID: 46156007}
   reset: {fileID: 2109740021}
   dialogueTextBox: {fileID: 810919160}
+--- !u!195 &921537199
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431533128952237307}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1433381684077656222
 GameObject:
   m_ObjectHideFlags: 0

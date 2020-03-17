@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Frappe 2
   m_EditorClassIdentifier: 
   isCorrect: 1
-  previousEvent: {fileID: 11400000, guid: 0facb2912fc7bf745ad3df7c2a90c2ea, type: 2}
   listeners: []
   npcListeners: []
