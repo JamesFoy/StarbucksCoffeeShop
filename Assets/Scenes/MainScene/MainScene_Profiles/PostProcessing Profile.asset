@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4957660792951955160
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 8.88
+  threshold:
+    overrideState: 1
+    value: 0.94
+  softKnee:
+    overrideState: 1
+    value: 0.071
+  clamp:
+    overrideState: 1
+    value: 65471.31
+  diffusion:
+    overrideState: 1
+    value: 4.79
+  anamorphicRatio:
+    overrideState: 0
+    value: 0
+  color:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  fastMode:
+    overrideState: 1
+    value: 1
+  dirtTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  dirtIntensity:
+    overrideState: 0
+    value: 0
 --- !u!114 &-3933251157061761874
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -18,10 +65,10 @@ MonoBehaviour:
     value: 1
   mode:
     overrideState: 1
-    value: 1
+    value: 0
   intensity:
     overrideState: 1
-    value: 0.44
+    value: 1.33
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -45,10 +92,10 @@ MonoBehaviour:
     value: 0
   radius:
     overrideState: 1
-    value: 0.29
+    value: 0.1
   quality:
     overrideState: 1
-    value: 2
+    value: 4
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +111,7 @@ MonoBehaviour:
   settings:
   - {fileID: 580860926496735914}
   - {fileID: -3933251157061761874}
+  - {fileID: -4957660792951955160}
 --- !u!114 &580860926496735914
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -82,14 +130,14 @@ MonoBehaviour:
     value: 1
   gradingMode:
     overrideState: 1
-    value: 0
+    value: 1
   externalLut:
     overrideState: 0
     value: {fileID: 0}
     defaultState: 1
   tonemapper:
     overrideState: 1
-    value: 2
+    value: 1
   toneCurveToeStrength:
     overrideState: 0
     value: 0
@@ -135,7 +183,7 @@ MonoBehaviour:
     value: -3.5
   postExposure:
     overrideState: 1
-    value: 0.89
+    value: 0.18
   contrast:
     overrideState: 1
     value: 0
