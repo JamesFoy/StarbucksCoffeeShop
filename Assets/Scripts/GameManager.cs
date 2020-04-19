@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnNewNpc();
+        StartCoroutine(SetDestination());
     }
 
     public void SpawnNewNpc()
@@ -44,4 +44,11 @@ public class GameManager : MonoBehaviour
         GameObject npc = Instantiate(npcPrefabs[Random.Range(0, npcPrefabs.Count)], spawnPoint.transform);
         npc.GetComponent<NavMeshAgent>().SetDestination(orderPoint.position);
     }
+
+    IEnumerator SetDestination()
+    {
+        yield return new WaitForSeconds(3f);
+        SpawnNewNpc();
+    }
+
 }

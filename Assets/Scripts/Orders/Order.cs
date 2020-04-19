@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Order", order = 1)]
+[CreateAssetMenu]
 public class Order : ScriptableObject
 {
     [BoxGroup("Order Name")]

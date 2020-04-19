@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8425592797689884889}
   - component: {fileID: 8425592797689884892}
   - component: {fileID: 8425592797689884893}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GrandeCup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6779516109823941794}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GrabPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,6 +196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6bb5b31df80333045a5b1f329d70c7b5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 6bb5b31df80333045a5b1f329d70c7b5,
         type: 3}
@@ -296,6 +301,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoffeeCupLid
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0467bc206a8e5994e8d1bae2ebaac85e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271860195020366848, guid: 0467bc206a8e5994e8d1bae2ebaac85e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1271860195020366848, guid: 0467bc206a8e5994e8d1bae2ebaac85e,
         type: 3}

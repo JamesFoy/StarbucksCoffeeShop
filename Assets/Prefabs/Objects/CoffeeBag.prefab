@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5207727579857606551}
   - component: {fileID: 3827661777943260577}
   - component: {fileID: 7359479308021010776}
+  - component: {fileID: 3710606090494779654}
   m_Layer: 0
   m_Name: CoffeeBag
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 9087922634841924996}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1.123, y: 2.096, z: -3.6770003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0869565, y: 1.086957, z: 1.086957}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3710606090494779654
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9087922634841924996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13999997, y: 0.14, z: 0.35999998}
+  m_Center: {x: -0.07728445, y: -0.077935345, z: 0.17999999}

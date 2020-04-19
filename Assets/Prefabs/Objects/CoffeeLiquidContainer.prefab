@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7900892104906364498}
   - component: {fileID: 773088705166729745}
   - component: {fileID: 2188337958991482544}
+  - component: {fileID: 8817786952803331232}
   m_Layer: 10
   m_Name: Container
   m_TagString: Untagged
@@ -79,6 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8817786952803331232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783239853002086630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39999998, y: 0.40000007, z: 0.8686843}
+  m_Center: {x: 0, y: -0.0000009536743, z: 0.43434215}
 --- !u!1 &2723132595203216441
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +104,7 @@ GameObject:
   - component: {fileID: 2690211391963744837}
   - component: {fileID: 5367690229647534823}
   - component: {fileID: 6742202141341318322}
+  - component: {fileID: 6419954293428746821}
   m_Layer: 0
   m_Name: Pipe
   m_TagString: Untagged
@@ -157,6 +172,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6419954293428746821
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723132595203216441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2797523, y: 0.28129333, z: 0.40000007}
+  m_Center: {x: -0.0015451908, y: -2.2737363e-14, z: 0.20000003}
 --- !u!1 &4792134519622754384
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +288,7 @@ GameObject:
   - component: {fileID: 3724750452709151167}
   - component: {fileID: 7939207549355256775}
   - component: {fileID: 7530510103694343885}
+  - component: {fileID: 3821434495879448713}
   m_Layer: 0
   m_Name: Nozzle
   m_TagString: Untagged
@@ -327,6 +356,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3821434495879448713
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7271740887425659174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10739435, y: 0.01747397, z: 0.020296335}
+  m_Center: {x: -0.00000023832897, y: 0.0004108371, z: 0.024054106}
 --- !u!1 &7882987846853761068
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8028757814030842862}
   - component: {fileID: 1310800441553715672}
   - component: {fileID: 4687243795240582433}
+  - component: {fileID: 3688925266029127461}
   m_Layer: 0
   m_Name: CoffeeCupStand
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6426840530950670845}
   m_LocalRotation: {x: -0.5, y: 0.50000006, z: 0.50000006, w: 0.5}
   m_LocalPosition: {x: 1.542, y: 0.8274214, z: 0.769}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0869565, y: 1.0869565, z: 1.0869565}
   m_Children:
   - {fileID: 4690676984788972715}
   - {fileID: 6685218146915456867}
@@ -90,6 +91,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3688925266029127461
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6426840530950670845}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 5060444177187149915, guid: 2f9b9fb316b9701468e52ada0238ece9, type: 3}
 --- !u!1001 &315838095417925553
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8278361281735953274}
   - component: {fileID: 1133116030495174988}
   - component: {fileID: 6666781475229978037}
+  - component: {fileID: 3185950896903142689}
   m_Layer: 0
   m_Name: CoffeePlate
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4952266760149465449}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1.045961, y: 0.88138634, z: -3.3251379}
-  m_LocalScale: {x: 0.632808, y: 0.632808, z: 0.632808}
+  m_LocalScale: {x: 0.6878348, y: 0.68783504, z: 0.68783504}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3185950896903142689
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4952266760149465449}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4518077, y: 0.4449438, z: 0.033262134}
+  m_Center: {x: 0, y: 0.0000000074505815, z: 0.016631067}

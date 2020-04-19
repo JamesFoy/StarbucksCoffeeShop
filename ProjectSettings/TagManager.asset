@@ -7,6 +7,8 @@ TagManager:
   - EmployeeCard
   - Floor
   - Money
+  - NPC
+  - CashRegister
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - NPC
   - PostProcessing
   - Glass/Transparent
-  - 
+  - InteractableObject
   - 
   - 
   - 

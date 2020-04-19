@@ -41,7 +41,7 @@ public class ManagerUI : MonoBehaviour
         correctScore = 0;
         incorrectScore = 0;
 
-        cashMachine = CashMachineBehaviour.Instance;
+        cashMachine = GameObject.FindGameObjectWithTag("CashRegister").GetComponent<CashMachineBehaviour>();
     }
 
     // Update is called once per frame

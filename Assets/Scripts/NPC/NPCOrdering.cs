@@ -38,49 +38,52 @@ public class NPCOrdering : MonoBehaviour
 
     public TMP_Text dialogueTextBox;
 
-    private void Awake()
-    {
-        cashMachine = CashMachineBehaviour.Instance;
-    }
-
     private void Start()
     {
-        GetOrder();
-
+        cashMachine = GameObject.FindGameObjectWithTag("CashRegister").GetComponent<CashMachineBehaviour>();
         npcCanvas.SetActive(false);
         gameManager = GameManager.Instance;
         orderPoint = gameManager.transform.Find("OrderPoint");
         spawnPoint = gameManager.transform.Find("SpawnPoint");
         anim = GetComponent<Animator>();
-        GetOrder();
         paymentType = UnityEngine.Random.value < .5 ? PaymentTypes.Cash : PaymentTypes.Card;
         changeDropZone.SetActive(false);
         agent = GetComponent<NavMeshAgent>();
+
+        GetOrder();
     }
 
     private void Update()
     {
+        if (!agent.pathPending)
+        {
+            if (agent.remainingDistance != 0)
+            {
+                agent.speed = 1.4f;
+                anim.SetBool("Walk", true);
+                NpcCanvasActive(false);
+            }
+            else if (!agent.pathPending && !agent.hasPath)
+            {
+                agent.speed = 0;
+                anim.SetBool("Walk", false);
+                transform.rotation = Quaternion.Lerp(transform.rotation, orderPoint.rotation, 2 * Time.deltaTime);
+                NpcCanvasActive(true);
+            }
+        }
+
         if (paymentType == PaymentTypes.Cash && cashMachine.paymentReady)
         {
+            NpcCanvasActive(false);
             anim.SetTrigger("CashPayment");
             changeDropZone.SetActive(true);
         }
         else if (paymentType == PaymentTypes.Card && cashMachine.paymentReady && !hasPaid)
         {
+            NpcCanvasActive(false);
             hasPaid = true;
             anim.SetTrigger("CardPayment");
             StartCoroutine(WaitTillAnimEnd(3.7f));
-        }
-
-        if (agent.remainingDistance > 0)
-        {
-            anim.SetBool("Walk", true);
-        }
-        else
-        {
-            anim.SetBool("Walk", false);
-            transform.rotation = Quaternion.Lerp(transform.rotation, orderPoint.rotation, 1);
-            NpcCanvasActive(true);
         }
     }
 
@@ -98,8 +101,8 @@ public class NPCOrdering : MonoBehaviour
     IEnumerator NpcLeavingCafe()
     {
         yield return new WaitForSeconds(3.5f);
-        cashMachine.GenerateOrder();
         gameManager.SpawnNewNpc();
+        cashMachine.GenerateOrder();
         Destroy(this.gameObject);
     }
 
@@ -110,7 +113,7 @@ public class NPCOrdering : MonoBehaviour
         yield return null;
     }
 
-    private void GetOrder()
+    public void GetOrder()
     {
         currentOrder = cashMachine.currentOrder;
 

@@ -7998,7 +7998,7 @@ GameObject:
   - component: {fileID: 365455911}
   m_Layer: 0
   m_Name: CashRegister
-  m_TagString: Untagged
+  m_TagString: CashRegister
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967169
@@ -8012,7 +8012,7 @@ Transform:
   m_GameObject: {fileID: 280787841155778486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.508, y: 0.998, z: -0.001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.92, y: 0.92, z: 0.92}
   m_Children:
   - {fileID: 280787841785627639}
   - {fileID: 478695759483448098}
@@ -8044,15 +8044,15 @@ MonoBehaviour:
   eventIncorrect: {fileID: 0}
   orderName: 
   PossibleOrders:
-  - {fileID: 11400000, guid: 51d9bf912bea29e4fa408f7f1598b3e1, type: 2}
-  - {fileID: 11400000, guid: 000d0f0de2fd2df4a8c7feb6c8b930da, type: 2}
-  - {fileID: 11400000, guid: 887346493f894f04c9a692d2954c9276, type: 2}
-  - {fileID: 11400000, guid: a66d0173508c9ac4580a4ab877321ccf, type: 2}
-  - {fileID: 11400000, guid: 261940cb9dc1d5547a3db04794da342d, type: 2}
-  - {fileID: 11400000, guid: bca4e1537f792d846b07d214f01a9945, type: 2}
-  - {fileID: 11400000, guid: 1db7ce870cde3b243afc4cce1e85031a, type: 2}
-  - {fileID: 11400000, guid: 4f60676614bd41f4f8ecd0744d4ef58e, type: 2}
-  - {fileID: 11400000, guid: 22400230e3389a74daddcae818024b51, type: 2}
+  - {fileID: 11400000, guid: 5236f63fceccd304b9b7df5b4e35d9c6, type: 2}
+  - {fileID: 11400000, guid: 35cda831457cf614dbeeeddf52b80076, type: 2}
+  - {fileID: 11400000, guid: 9b6115fd093c4ab40ae68cd894c51947, type: 2}
+  - {fileID: 11400000, guid: 2032b51b22006434aa32bc6ae2144219, type: 2}
+  - {fileID: 11400000, guid: 3fbc6753c60ddb041b9c9a2a7c89e4cc, type: 2}
+  - {fileID: 11400000, guid: 00fb7238b623a9c4ba9169e9ba18d22e, type: 2}
+  - {fileID: 11400000, guid: 33b3144b1f43a9646aef7bf01b14f755, type: 2}
+  - {fileID: 11400000, guid: 1d63dbb24ab28b941bbdf4d69d49bdf0, type: 2}
+  - {fileID: 11400000, guid: b3e521dbc816f094395cc7b3b1abab13, type: 2}
   currentOrder: {fileID: 0}
   orderAmount: 0
   paymentReady: 0

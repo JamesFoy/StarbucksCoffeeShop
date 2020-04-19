@@ -31,6 +31,8 @@ public class CashMachineBehaviour : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+
+        GenerateOrder();
     }
     #endregion
 
@@ -130,8 +132,7 @@ public class CashMachineBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateOrder();
-        paymentReady = false;
+        
     }
 
     private void Update()
@@ -208,6 +209,8 @@ public class CashMachineBehaviour : MonoBehaviour
 
     public void GenerateOrder()
     {
+        paymentReady = false;
+
         currentOrder = PossibleOrders[UnityEngine.Random.Range(0, PossibleOrders.Count)];
         orderAmount = amounts[UnityEngine.Random.Range(0, amounts.Count)];
 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773037570}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GrabPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3497528538070165562}
   - component: {fileID: 3497528538070165563}
   - component: {fileID: 3223098286226490842}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EmployeeCard
   m_TagString: EmployeeCard
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 6427788721442605409}
   - component: {fileID: 1081177764466083882}
   - component: {fileID: 177320881}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mesh
   m_TagString: EmployeeCard
   m_Icon: {fileID: 0}
